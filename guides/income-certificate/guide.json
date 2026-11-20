@@ -1,0 +1,125 @@
+{
+  "id": "income-certificate",
+  "title": "Income Certificate Application",
+  "titleHi": "आय प्रमाण पत्र आवेदन",
+  "titleTa": "வருமான சான்றிதழ் விண்ணப்பம்",
+  "purpose": "Officially confirms your family's annual income. Used for scholarships, fee waivers, and government schemes.",
+  "purposeHi": "आपकी पारिवारिक वार्षिक आय की आधिकारिक पुष्टि। छात्रवृत्ति, शुल्क माफी और सरकारी योजनाओं के लिए।",
+  "purposeTa": "உங்கள் குடும்பத்தின் வருடாந்திர வருமானத்தை அதிகாரப்பூர்வமாக உறுதிப்படுத்துகிறது.",
+  "estimatedMinutes": 12,
+  "documentsNeeded": [
+    {
+      "name": "Aadhaar card",
+      "nameHi": "आधार कार्ड",
+      "nameTa": "ஆதார் அட்டை",
+      "reason": "For name, date of birth and address"
+    },
+    {
+      "name": "Ration card or address proof",
+      "nameHi": "राशन कार्ड या पते का प्रमाण",
+      "nameTa": "குடும்ப அட்டை அல்லது முகவரி சான்று",
+      "reason": "Only if you have one (field 6)"
+    },
+    {
+      "name": "Self-declaration (Annexure-II)",
+      "nameHi": "स्व-घोषणा (अनुलग्नक-II)",
+      "nameTa": "சுய-அறிவிப்பு (இணைப்பு-II)",
+      "reason": "Must be attested by a Gazetted Officer"
+    }
+  ],
+  "fields": [
+    {
+      "selector": "[name='applicant_name'], #applicant_name, label:contains('Name of Applicant') ~ input",
+      "label": "Name of Applicant",
+      "explanation": "Your full legal name, exactly as it appears on your Aadhaar card.",
+      "explanationHi": "आपका पूरा कानूनी नाम, जैसा आधार कार्ड पर है।",
+      "explanationTa": "உங்கள் ஆதார் அட்டையில் உள்ளபடியே முழுப் பெயர்.",
+      "example": "Priya Rajan",
+      "tip": "Use the exact spelling on your Aadhaar to avoid mismatches.",
+      "tipHi": "बेमेल से बचने के लिए आधार पर जैसी स्पेलिंग है, वैसी ही लिखें।",
+      "tipTa": "பொருந்தாமல் இருக்காதபடி ஆதாரில் உள்ள எழுத்துப்படியே எழுதுங்கள்."
+    },
+    {
+      "selector": "[name='domicile'], #domicile, label:contains('Domicile') ~ input, label:contains('Domicile') ~ select",
+      "label": "Domicile of Applicant (State of Permanent Residence)",
+      "explanation": "The state you call your permanent home — where your family has lived for years, not where you rent or study now.",
+      "explanationHi": "वह राज्य जिसे आप अपना स्थायी घर मानते हैं — जहाँ आपका परिवार वर्षों से रहता है, न कि किराये या पढ़ाई की जगह।",
+      "explanationTa": "நீங்கள் நிரந்தர வசிப்பிடமாக கருதும் மாநிலம் — உங்கள் குடும்பம் பல ஆண்டுகளாக வசிக்கும் இடம்.",
+      "example": "Tamil Nadu",
+      "tip": "Write the state exactly as it appears on your Aadhaar or ration card.",
+      "tipHi": "ठीक वैसे लिखें जैसा आधार या राशन कार्ड पर है।",
+      "tipTa": "ஆதார் அல்லது குடும்ப அட்டையில் உள்ளபடியே மாநிலப் பெயரை எழுதுங்கள்."
+    },
+    {
+      "selector": "[name='father_name'], #father_name, [name='guardian_name'], label:contains('Father') ~ input, label:contains('Guardian') ~ input",
+      "label": "Father's / Guardian's Name",
+      "explanation": "Your father's full name, or your guardian's name if your father is not applicable. Use the name as on your Aadhaar.",
+      "explanationHi": "आपके पिता का पूरा नाम, या आपके अभिभावक का नाम यदि पिता लागू नहीं हैं। आधार पर जो नाम है वह लिखें।",
+      "explanationTa": "உங்கள் தந்தையின் முழுப் பெயர், அல்லது தந்தை இல்லாவிட்டால் பாதுகாவலரின் பெயர். ஆதாரில் உள்ளபடி எழுதவும்.",
+      "example": "Rajan Murugan",
+      "tip": "If you are a married woman, still enter your father's name unless specified otherwise.",
+      "tipHi": "यदि आप विवाहित महिला हैं, तो भी जब तक अन्यथा न कहा जाए, पिता का नाम लिखें।",
+      "tipTa": "திருமணமான பெண்ணாக இருந்தாலும், வேறாக குறிப்பிடப்படாத வரை தந்தையின் பெயரை எழுதுங்கள்."
+    },
+    {
+      "selector": "[name='dob'], #dob, [name='date_of_birth'], input[type='date'][id*='birth']",
+      "label": "Date of Birth",
+      "explanation": "Your date of birth as shown on your Aadhaar card or birth certificate.",
+      "explanationHi": "आपका जन्म दिनांक, जैसा आधार कार्ड या जन्म प्रमाण पत्र पर है।",
+      "explanationTa": "உங்கள் ஆதார் அட்டை அல்லது பிறப்புச் சான்றிதழில் உள்ள பிறந்த தேதி.",
+      "example": "15/08/1995",
+      "tip": "Use DD/MM/YYYY format unless the form asks otherwise.",
+      "tipHi": "DD/MM/YYYY प्रारूप का उपयोग करें जब तक फ़ॉर्म अन्यथा न कहे।",
+      "tipTa": "படிவம் வேறுவிதமாக கேட்காத வரை DD/MM/YYYY வடிவத்தைப் பயன்படுத்துங்கள்."
+    },
+    {
+      "selector": "[name='annual_income'], #annual_income, label:contains('Annual Income') ~ input, label:contains('Total Income') ~ input",
+      "label": "Annual Family Income (in ₹)",
+      "explanation": "The total money your entire household earns in one year from all sources — salaries, farming, business, rent, etc. Enter in Indian Rupees.",
+      "explanationHi": "आपका पूरा परिवार एक साल में सभी स्रोतों से जो कमाता है — वेतन, खेती, व्यवसाय, किराया आदि। भारतीय रुपये में लिखें।",
+      "explanationTa": "உங்கள் குடும்பம் ஒரு வருடம் அனைத்து மூலங்களிலிருந்தும் சம்பாதிக்கும் மொத்த தொகை — சம்பளம், விவசாயம், தொழில், வாடகை போன்றவை. இந்திய ரூபாயில் எழுதுங்கள்.",
+      "example": "180000",
+      "tip": "Include income of all earning members: yourself, spouse, parents, etc. Do not include one-time gifts or loans.",
+      "tipHi": "सभी कमाने वाले सदस्यों की आय शामिल करें: स्वयं, पति/पत्नी, माता-पिता आदि। एकमुश्त उपहार या ऋण शामिल न करें।",
+      "tipTa": "அனைத்து வருமானம் ஈட்டும் உறுப்பினர்களின் வருமானத்தையும் சேர்க்கவும். ஒருமுறை பரிசு அல்லது கடன்களை சேர்க்க வேண்டாம்."
+    },
+    {
+      "selector": "[name='address'], #address, [name='permanent_address'], label:contains('Address') ~ textarea",
+      "label": "Permanent Address",
+      "explanation": "Your full home address — house number, street, village or locality, taluk, district, state and PIN code.",
+      "explanationHi": "आपका पूरा घर का पता — मकान नंबर, सड़क, गाँव या मोहल्ला, तालुक, जिला, राज्य और PIN कोड।",
+      "explanationTa": "உங்கள் முழு வீட்டு முகவரி — வீட்டு எண், தெரு, கிராமம் அல்லது பகுதி, வட்டம், மாவட்டம், மாநிலம் மற்றும் PIN குறியீடு.",
+      "example": "12, Gandhi Street, Vadapalani, Chennai – 600026, Tamil Nadu",
+      "tip": "This must match the address on your Aadhaar or ration card exactly.",
+      "tipHi": "यह पता ठीक आधार या राशन कार्ड पर जैसा है, वैसा ही होना चाहिए।",
+      "tipTa": "இது உங்கள் ஆதார் அல்லது குடும்ப அட்டையில் உள்ள முகவரியுடன் சரியாக பொருந்த வேண்டும்."
+    }
+  ],
+  "jargonGlossary": {
+    "domicile": {
+      "en": "The state you permanently live in",
+      "hi": "वह राज्य जहाँ आप स्थायी रूप से रहते हैं",
+      "ta": "நீங்கள் நிரந்தரமாக வசிக்கும் மாநிலம்"
+    },
+    "annexure": {
+      "en": "An attachment document required with the form",
+      "hi": "फ़ॉर्म के साथ लगाया जाने वाला दस्तावेज़",
+      "ta": "படிவத்துடன் இணைக்க வேண்டிய ஆவணம்"
+    },
+    "self-attested": {
+      "en": "You sign the photocopy yourself to confirm it's genuine",
+      "hi": "आप खुद फ़ोटोकॉपी पर हस्ताक्षर करके इसे असली बताते हैं",
+      "ta": "நீங்களே நகலில் கையெழுத்திட்டு அது உண்மையானது என உறுதிப்படுத்துவது"
+    },
+    "gazetted officer": {
+      "en": "A senior government employee authorised to sign official documents",
+      "hi": "एक वरिष्ठ सरकारी कर्मचारी जो आधिकारिक दस्तावेज़ों पर हस्ताक्षर करने के लिए अधिकृत है",
+      "ta": "அரசு ஆவணங்களில் கையெழுத்திட அங்கீகரிக்கப்பட்ட மூத்த அரசு அலுவலர்"
+    },
+    "taluk": {
+      "en": "An administrative subdivision of a district, similar to a county",
+      "hi": "एक जिले की प्रशासनिक उपइकाई",
+      "ta": "மாவட்டத்தின் நிர்வாக துணைப்பிரிவு"
+    }
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "urlPatterns": [
+    "tnedistrict.in",
+    "emaa.tn.gov.in",
+    "serviceonline.gov.in"
+  ],
+  "titlePatterns": [
+    "income certificate",
+    "income cert",
+    "आय प्रमाण",
+    "வருமான சான்றிதழ்"
+  ],
+  "formPatterns": [
+    "annexure-ii",
+    "domicile",
+    "annual income",
+    "annual_income",
+    "applicant_name"
+  ]
+}

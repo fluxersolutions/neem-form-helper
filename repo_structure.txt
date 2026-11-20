@@ -1,0 +1,48 @@
+extension/
+├── wxt.config.ts                 ✅ MV3 config
+├── tailwind.config.js            ✅ Neem design tokens
+├── src/
+│   ├── ai/
+│   │   └── aiAdapter.ts          ✅ Gemini→Grok→OpenRouter, PII masking
+│   ├── entrypoints/
+│   │   ├── content.ts            ✅ Shadow DOM, draggable FAB, settings sync
+│   │   ├── background.ts         ✅ Service worker, PING handler, storage
+│   │   └── popup/
+│   │       ├── index.html        ✅ Popup shell
+│   │       └── popup.tsx         ✅ Full settings UI + proxy URL config
+│   ├── components/
+│   │   ├── FloatingButton.tsx    ✅ Draggable FAB (pointer events)
+│   │   ├── NudgeBubble.tsx       ✅ "Need help?" bubble (all 3 langs)
+│   │   ├── NeemPanel.tsx         ✅ 400px panel, 5-view router, nav bar
+│   │   ├── PanelHeader.tsx       ✅ Logo, lang chip, minimize, close
+│   │   ├── LanguageSwitcher.tsx  ✅ EN/HI/TA dropdown
+│   │   └── views/
+│   │       ├── FormSummaryView.tsx  ✅ AI summary + doc checklist
+│   │       ├── GuidedFillView.tsx   ✅ Step guide + highlight + ask input
+│   │       ├── ChatView.tsx         ✅ Full chat (all 3 langs + fallback)
+│   │       ├── ReviewView.tsx       ✅ Issue list + "Go to field"
+│   │       └── SettingsView.tsx     ✅ All toggles
+│   ├── utils/
+│   │   ├── formParser.ts         ✅ Universal DOM scanner (any form)
+│   │   ├── fieldHighlighter.ts   ✅ Highlight ring + step badge
+│   │   └── storage.ts            ✅ Typed chrome.storage wrapper
+│   ├── i18n/
+│   │   ├── en.ts, hi.ts, ta.ts   ✅ 100+ strings each
+│   │   └── index.ts              ✅ t(lang, key) function
+│   └── types/index.ts            ✅ FormField, PanelState, ChatMessage…
+
+backend/
+├── src/
+│   ├── index.ts                  ✅ Express + CORS + rate limit + PII
+│   ├── providers.ts              ✅ NEW: Gemini→Grok→OpenRouter dispatcher
+│   ├── gemini.ts                 ✅ Gemini REST client
+│   ├── grok.ts                   ✅ NEW: Grok (xAI) client
+│   ├── openrouter.ts             ✅ NEW: OpenRouter client (free models)
+│   ├── prompts.ts                ✅ Prompt templates
+│   └── handlers/                 ✅ explain, chat, summary
+
+guides/
+├── README.md                     ✅ Contributor guide
+└── income-certificate/
+    ├── guide.json                ✅ Full EN/HI/TA guide
+    └── portal-patterns.json      ✅ URL/title detection patterns
